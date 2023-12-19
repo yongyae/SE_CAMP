@@ -41,6 +41,7 @@ body {
 
 .box:hover {
   background-color: rgb(11, 118, 25);
+  background-image: url(https://glutenfreeandmore.com/wp-content/uploads/2018/12/holiday-gift-boxes.jpg);
   box-shadow: 5px 10px rgb(1, 75, 11);
 }
 

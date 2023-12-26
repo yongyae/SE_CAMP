@@ -1,30 +1,25 @@
 <html>
-
-<head>
-    <meta charset="utf-8">
-</head>
-
-<body>
-    <?php $multi_x = 2; ?>
-    <h1>ตารางสูตรคูณแม่ <?php echo $multi_x ?></h1>
-
-    <table>
-        <tbody>
-            <tr>
-                <td></td>
-                <td>x</td>
-                <td></td>
-                <td>=</td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
+<meta charset="utf-8">
     <style>
-        table {
-            width: 150px;
-            height: 265px;
-        }
+        div {
+            width: 180px;
+            height: 380px;
+            border: 1px solid black;
+            overflow: scroll;
+            padding: 20px;
+            font-size: 18;
+            background-color: white;
+            }
     </style>
-</body>
-
+    <center>
+    <body background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6Nbznvx-42F3KGaMzSEBWYSucfGtuuq7MnA&usqp=CAU">
+        <?php $multix = 2; ?>
+        <h1>ตารางสูตรคูณแม่ <?php echo $multix ?></h1>
+        <div> 
+            <?php for($i = 1; $i <= 24; $i++) {?>
+                <?php echo $multix ?> x <?php echo $i ?> = <?php echo $multix*$i ?><br>
+            <?php } ?>
+        </div>
+    </body>
+    </center>
 </html>

@@ -22,7 +22,7 @@ class MyController extends Controller
     }
 
     public function store(Request $req){
-        $data['myinput'] = $req->input('myinput');
-        return view('myroute', $data);
+        //$data['myinput'] = $req->input('myinput');
+        //return view('myroute', $data);
     }
 }

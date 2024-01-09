@@ -16,15 +16,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
 });
+*/
 
 Route::get('/my-route', function () {
     // return view('myroute);
     //        key   =>   value
     $data = ['val_a' => 'Hello World!'];
-    $data['val_b'] = "Laravel";
     return view('myfolder.mypage', $data);
 });
 
@@ -33,6 +33,7 @@ Route::post('my-route', function(Request $req){
     return view('myroute', $data);
 });
 
+/*
 Route::get('/my-controller', [MyController::class, 'index']);
 Route::get('/my-controller2','App\Http\Controllers\MyController@index');
 
@@ -42,3 +43,4 @@ Route::namespace('App\Http\Controllers')->group(function(){
 });
 
 Route::resource('my-controller4', MyController::class);
+*/

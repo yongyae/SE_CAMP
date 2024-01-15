@@ -3,7 +3,7 @@
 use App\Http\Controllers\MyController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\C_titles;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,3 +46,5 @@ Route::post('/my-route', function(Request $req){
     $data['myinput'] =  $req->input('myinput');
     return view('myroute', $data);
 });
+
+Route::resource('titles',C_titles::class);

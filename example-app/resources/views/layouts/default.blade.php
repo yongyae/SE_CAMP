@@ -236,7 +236,7 @@
                                 </p>
                             </a>
                         </li>
-                        <a href="logout" class="btn btn-lg" style="background-color: white" >
+                        <a href="login" class="btn btn-lg" style="background-color: white" >
                             <span class="glyphicon glyphicon-log-out" style="color: gray"> Log out </span>
                         </a>
                     </ul>

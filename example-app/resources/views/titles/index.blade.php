@@ -2,6 +2,29 @@
 
 @section('title', 'Titles')
 
+@section('js')
+    <script>
+        function deleteme(id) {
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: "Deleted!",
+                        text: "Your file has been deleted.",
+                        icon: "success"
+                    });
+                }
+            });
+        }
+    </script>
+@endsection
 @section('content')
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -90,13 +113,14 @@
                                             {{ $title->tit_is_active}}
                                         </td>
                                         <td>
-                                            <a href="{{ url('/titles' , $title->tit_id)}}"
-                                                class="btn btn-warning">แก้ไข
-                                            </a>
-                                            <form method="post" action="/titles/{{ $title->tit_id }}">
+                                            <a href="{{ url('/titles/' . $title->tit_id)}}"
+                                                class="btn btn-warning">แก้ไข</a>
+                                            <button type="button" class="btn btn-danger"
+                                                onclick="deleteme({{$title->tit_id}})">ลบ</button>
+                                            <form id="form_delete_{{$title->tit_id}}" method="POST"
+                                                action="/titles/{{$title->tit_id}}">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button type="submit" class="btn btn-danger">ลบ</button>
                                             </form>
                                         </td>
                                     </tr>
